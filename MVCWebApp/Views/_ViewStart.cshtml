@@ -1,0 +1,14 @@
+﻿@{
+    var controller = ViewContext.RouteData.Values["Controller"].ToString();
+    var action = ViewContext.RouteData.Values["Action"].ToString();
+
+
+    if (controller == "Home" && action == "Index")
+    {
+        Layout = "_CustomLayout";
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
+}
