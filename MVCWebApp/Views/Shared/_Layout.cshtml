@@ -117,26 +117,7 @@
                         <h4>
                             Reach at..
                         </h4>
-                        <div class="contact_link_box">
-                            <a href="">
-                                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <span>
-                                    Location
-                                </span>
-                            </a>
-                            <a href="">
-                                <i class="fa fa-phone" aria-hidden="true"></i>
-                                <span>
-                                    Call +01 1234567890
-                                </span>
-                            </a>
-                            <a href="">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                                <span>
-                                    demo@gmail.com
-                                </span>
-                            </a>
-                        </div>
+                        @await Component.InvokeAsync("Footer")
                     </div>
                 </div>
                 <div class="col-md-4 footer-col">
@@ -196,6 +177,6 @@
     <script src="~/js/main.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
-    @await RenderSectionAsync("Scripts", required: false)
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

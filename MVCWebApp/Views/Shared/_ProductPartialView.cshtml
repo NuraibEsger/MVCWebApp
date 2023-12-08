@@ -1,0 +1,28 @@
+﻿@using MVCWebApp.Entites;
+@model Product;
+
+<div class="col-sm-6 col-md-4 col-lg-4">
+    <div class="box">
+        <div class="option_container">
+            <div class="options">
+                <a href="" class="option1">
+                    @Model.Name
+                </a>
+                <a href="" class="option2">
+                    Buy Now
+                </a>
+            </div>
+        </div>
+        <div class="img-box">
+            <img src="~/image/@Model.ImagePath" alt="">
+        </div>
+        <div class="detail-box">
+            <h5>
+                @Model.Name
+            </h5>
+            <h6>
+                @Model.Price
+            </h6>
+        </div>
+    </div>
+</div>

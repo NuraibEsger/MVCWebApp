@@ -1,4 +1,4 @@
-﻿@model HomeIndexViewModel;
+﻿@model HomeIndexVM;
 @{
     ViewData["Title"] = "Home page";
 }
@@ -286,37 +286,13 @@
             </h2>
         </div>
         <div class="row">
-            @foreach(var products in Model.Products)
+            @foreach(var products in Model.Products.Take(6))
             {
-                <div class="col-sm-6 col-md-4 col-lg-4">
-                    <div class="box">
-                        <div class="option_container">
-                            <div class="options">
-                                <a href="" class="option1">
-                                    @products.Name;
-                                </a>
-                                <a href="" class="option2">
-                                    Buy Now
-                                </a>
-                            </div>
-                        </div>
-                        <div class="img-box">
-                            <img src="~/image/@products.ImagePath" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                @products.Name;
-                            </h5>
-                            <h6>
-                                @products.Price;
-                            </h6>
-                        </div>
-                    </div>
-                </div>
+                <partial name="_ProductPartialView" model="products" />
             }
         </div>
         <div class="btn-box">
-            <a asp-page="/product">
+            <a asp-controller="Product">
                 View All products
             </a>
         </div>
@@ -357,72 +333,7 @@
         </div>
         <div id="carouselExample3Controls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="box col-lg-10 mx-auto">
-                        <div class="img_container">
-                            <div class="img-box">
-                                <div class="img_box-inner">
-                                    <img src="~/image/client.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Anna Trevor
-                            </h5>
-                            <h6>
-                                Customer
-                            </h6>
-                            <p>
-                                Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="box col-lg-10 mx-auto">
-                        <div class="img_container">
-                            <div class="img-box">
-                                <div class="img_box-inner">
-                                    <img src="~/image/client.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Anna Trevor
-                            </h5>
-                            <h6>
-                                Customer
-                            </h6>
-                            <p>
-                                Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="box col-lg-10 mx-auto">
-                        <div class="img_container">
-                            <div class="img-box">
-                                <div class="img_box-inner">
-                                    <img src="~/image/client.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Anna Trevor
-                            </h5>
-                            <h6>
-                                Customer
-                            </h6>
-                            <p>
-                                Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                @await Component.InvokeAsync("TestimonialProperty")
             </div>
             <div class="carousel_btn_box">
                 <a class="carousel-control-prev" href="#carouselExample3Controls" role="button" data-slide="prev">

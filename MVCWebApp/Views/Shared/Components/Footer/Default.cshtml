@@ -1,0 +1,26 @@
+﻿@model CompanyPropertiesVM
+
+
+@foreach(var item in Model.companyProperties)
+{
+    <div class="contact_link_box">
+        <a href="https://www.google.com/search?q=Nizami+k%C3%BC%C3%A7%C9%99si+203B%2C+AF+Business+House%2C+2-ci+m%C9%99rt%C9%99b%C9%99%2C+Baku+1000&rlz=1C1GCEA_enAZ1074AZ1074&oq=Nizami+k%C3%BC%C3%A7%C9%99si+203B%2C+AF+Business+House%2C+2-ci+m%C9%99rt%C9%99b%C9%99%2C+Baku+1000&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGEDSAQc5MzVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <span>
+                @item.Adress
+            </span>
+        </a>
+        <a href="">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <span>
+                Call +@item.PhoneNumber
+            </span>
+        </a>
+        <a href="">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <span>
+                @item.Email
+            </span>
+        </a>
+    </div>
+}

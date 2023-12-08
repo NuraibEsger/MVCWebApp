@@ -1,0 +1,73 @@
+﻿@using MVCWebApp.Entities;
+@model TestimonialVM
+
+
+@foreach(var item in Model.TestimonialProperties)
+{
+    <div class="carousel-item active">
+        <div class="box col-lg-10 mx-auto">
+            <div class="img_container">
+                <div class="img-box">
+                    <div class="img_box-inner">
+                        <img src="~/image/@item.ImagePath" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="detail-box">
+                <h5>
+                    @item.Name
+                </h5>
+                <h6>
+                    @item.Description
+                </h6>
+                <p>
+                    Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <div class="box col-lg-10 mx-auto">
+            <div class="img_container">
+                <div class="img-box">
+                    <div class="img_box-inner">
+                        <img src="~/image/@item.ImagePath" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="detail-box">
+                <h5>
+                    @item.Name
+                </h5>
+                <h6>
+                    @item.Description
+                </h6>
+                <p>
+                    Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <div class="box col-lg-10 mx-auto">
+            <div class="img_container">
+                <div class="img-box">
+                    <div class="img_box-inner">
+                        <img src="~/image/@item.ImagePath" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="detail-box">
+                <h5>
+                    @item.Name
+                </h5>
+                <h6>
+                    @item.Description
+                </h6>
+                <p>
+                    Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.
+                </p>
+            </div>
+        </div>
+    </div>
+}

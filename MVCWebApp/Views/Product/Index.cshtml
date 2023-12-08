@@ -1,4 +1,4 @@
-﻿@model ProductIndexViewModel;
+﻿@model ProductIndexVM;
 @{
     ViewData["Title"] = "About page";
 }
@@ -13,31 +13,7 @@
         <div class="row">
             @foreach (var products in Model.Products)
             {
-                <div class="col-sm-6 col-md-4 col-lg-4">
-                    <div class="box">
-                        <div class="option_container">
-                            <div class="options">
-                                <a href="" class="option1">
-                                    @products.Name;
-                                </a>
-                                <a href="" class="option2">
-                                    Buy Now
-                                </a>
-                            </div>
-                        </div>
-                        <div class="img-box">
-                            <img src="~/image/@products.ImagePath" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                @products.Name;
-                            </h5>
-                            <h6>
-                                @products.Price;
-                            </h6>
-                        </div>
-                    </div>
-                </div>
+                <partial name="_ProductPartialView" model="products" />
             }
         </div>
         <div class="btn-box">
